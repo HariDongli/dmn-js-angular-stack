@@ -25,15 +25,21 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Steps to integrate dmn-js:
 
 ## step1: 
 npm i --save-dev babel-plugin-inferno babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-plugin-transform-object-assign
+
 npm i --save-dev babel-plugin-inferno
 
 npm install --save-dev babel-loader babel-core babel-preset-env webpack
+
 npm install --save-dev babel-preset-react
+
 npm install --save-dev babel-preset-stage-0
+
 npm install --save-dev babel-preset-es2015
+
 npm install --save dmn-js
 
 
