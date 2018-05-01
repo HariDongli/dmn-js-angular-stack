@@ -28,11 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Steps to integrate dmn-js:
 
 ## step1: 
-//
 
 	npm i --save-dev babel-plugin-inferno babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-plugin-transform-object-assign
-
-//
 	
 	npm i --save-dev babel-plugin-inferno
 
@@ -50,7 +47,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## step2:
 in webpack.config.js
 	      
-              //modules.export = {
+              modules.export = {
 	              module: {
                              rules:{
 					    { test: /\.js$/, 
@@ -65,7 +62,7 @@ in webpack.config.js
 
 ## step3:
    // this is for viewer // you can add modeler css as well
-    //stylesheets: 
+    stylesheets: 
   	
 	 <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css">
    	
@@ -78,7 +75,6 @@ in webpack.config.js
 
 ## step4:
 Index.html
-//
 
 	<body >
 		<div class="canvas" style="width:100vh;height:100vh ;padding-left:100px"></div>
@@ -86,13 +82,11 @@ Index.html
 
 ## step-5:
 In typings.d.ts
-//
 
 	declare module 'dmn-js';
 
 ## step6:
 app.component.ts
-//
 
     import Viewer from 'dmn-js';
 
