@@ -28,19 +28,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Steps to integrate dmn-js:
 
 ## step1: 
-npm i --save-dev babel-plugin-inferno babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-plugin-transform-object-assign
+//
 
-npm i --save-dev babel-plugin-inferno
+	npm i --save-dev babel-plugin-inferno babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-plugin-transform-object-assign
 
-npm install --save-dev babel-loader babel-core babel-preset-env webpack
+//
+	
+	npm i --save-dev babel-plugin-inferno
 
-npm install --save-dev babel-preset-react
+	npm install --save-dev babel-loader babel-core babel-preset-env webpack
 
-npm install --save-dev babel-preset-stage-0
+	npm install --save-dev babel-preset-react
 
-npm install --save-dev babel-preset-es2015
+	npm install --save-dev babel-preset-stage-0
 
-npm install --save dmn-js
+	npm install --save-dev babel-preset-es2015
+
+	npm install --save dmn-js
 
 
 ## step2:
@@ -61,32 +65,36 @@ in webpack.config.js
 
 ## step3:
    // this is for viewer // you can add modeler css as well
-    stylesheets: 
-   href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css"
+    //stylesheets: 
+  	
+	 <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css">
+   	
+   	 <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-decision-table.css">
    
-   href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-decision-table.css"
+   	 <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css">
    
-   href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css"
-   
-   href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css"
+   	<link rel="stylesheet"  href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css">
    
 
 ## step4:
 Index.html
+//
 
-<body >
-	<div class="canvas" style="width:100vh;height:100vh ;padding-left:100px"></div>
-</body>
+	<body >
+		<div class="canvas" style="width:100vh;height:100vh ;padding-left:100px"></div>
+	</body>
 
 ## step-5:
 In typings.d.ts
+//
 
-declare module 'dmn-js';
+	declare module 'dmn-js';
 
 ## step6:
 app.component.ts
+//
 
-import Viewer from 'dmn-js';
+    import Viewer from 'dmn-js';
 
     //in the class
     constructor(private http: HttpClient ){
