@@ -26,7 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-##step1: 
+## step1: 
 npm i --save-dev babel-plugin-inferno babel-plugin-transform-object-rest-spread babel-plugin-transform-class-properties babel-plugin-transform-object-assign
 npm i --save-dev babel-plugin-inferno
 
@@ -37,7 +37,7 @@ npm install --save-dev babel-preset-es2015
 npm install --save dmn-js
 
 
-##step2:
+## step2:
 in webpack.config.js
     Inside modules.export ={
 	module:{
@@ -55,7 +55,7 @@ rules:{
 }
 
 
-##step3:
+## step3:
 // this is for viewer // you can add modeler css as well
 
 <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css">
@@ -63,19 +63,19 @@ rules:{
   <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css">
   <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css">
 
-##step4:
+## step4:
 Index.html
 
 <body >
 	<div class="canvas" style="width:100vh;height:100vh ;padding-left:100px"></div>
 </body>
 
-##step-5:
+## step-5:
 In typings.d.ts
 
 declare module 'dmn-js';
 
-##step6:
+## step6:
 app.component.ts
 
 import Viewer from 'dmn-js';
