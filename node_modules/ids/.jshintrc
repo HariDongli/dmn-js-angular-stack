@@ -1,0 +1,12 @@
+{
+  "node": true,
+  "maxlen": 120,
+  "unused": "vars",
+  "globals": {
+    "describe": false,
+    "it": false,
+    "expect": true,
+    "beforeEach": true,
+    "afterEach": true
+  }
+}
