@@ -45,15 +45,15 @@ npm install --save dmn-js
 
 ## step2:
 in webpack.config.js
-	      // inside 
-               modules.export = {
+	      
+              //modules.export = {
 	              module: {
                              rules:{
 					    { test: /\.js$/, 
 					    exclude: /node_modules\/(?!(dmn-js|dmn-js-drd|dmn-js-shared|dmn-js-decision-table|table-js|dmn-js-literal-expression|diagram-js)\/).*/,
 					    loader: 'babel-loader',query: {presets: ["react","es2015","stage-0"]}
 					    }
-                    //rest of things
+                    rest of things
                     }
             }
         }
@@ -63,9 +63,13 @@ in webpack.config.js
    // this is for viewer // you can add modeler css as well
     stylesheets: 
    href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css"
+   
    href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-decision-table.css"
+   
    href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css"
+   
    href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css"
+   
 
 ## step4:
 Index.html
