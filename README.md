@@ -45,29 +45,27 @@ npm install --save dmn-js
 
 ## step2:
 in webpack.config.js
-    Inside modules.export ={
-	module:{
-rules:{
+     Inside modules.export = {
+	    module: {
+                rules:{
+                    { test: /\.js$/, 
+                    exclude: /node_modules\/(?!(dmn-js|dmn-js-drd|dmn-js-shared|dmn-js-decision-table|table-js|dmn-js-literal-expression|diagram-js)\/).*/,
+                    loader: 'babel-loader',query: {presets: ["react","es2015","stage-0"]}
+                    }
 
- { test: /\.js$/, 
-        exclude: /node_modules\/(?!(dmn-js|dmn-js-drd|dmn-js-shared|dmn-js-decision-table|table-js|dmn-js-literal-expression|diagram-js)\/).*/,
-        loader: 'babel-loader',query: {presets: ["react","es2015","stage-0"]}
-        
-      }
-
-//rest of things
-}
-}
-}
+                    //rest of things
+                    }
+            }
+        }
 
 
 ## step3:
 // this is for viewer // you can add modeler css as well
 
-<link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css">
-  <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-decision-table.css">
-  <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css">
-  <link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css">
+  #<link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-drd.css">
+  #<link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-decision-table.css">
+  #<link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-js-literal-expression.css">
+  #<link rel="stylesheet" href="https://unpkg.com/dmn-js@4.3.0/dist/assets/dmn-font/css/dmn.css">
 
 ## step4:
 Index.html
@@ -86,14 +84,14 @@ app.component.ts
 
 import Viewer from 'dmn-js';
 
-//in the class
- constructor(private http: HttpClient ){
-    this.http.get('../assets/val.xml',{responseType: 'text'}).subscribe(x=>{
-     var xml= x; // my DMN 1.1 xml
-     //var myContainer = document.getElementsByClassName('canvas');
-    var viewer = new Viewer({
-      container: '.canvas'
-    });
+    //in the class
+    constructor(private http: HttpClient ){
+        this.http.get('../assets/val.xml',{responseType: 'text'}).subscribe(x=>{
+        var xml= x; // my DMN 1.1 xml
+        //var myContainer = document.getElementsByClassName('canvas');
+        var viewer = new Viewer({
+         container: '.canvas'
+      });
 
     viewer.importXML(xml, function(err) {
      console.log('*********************');
